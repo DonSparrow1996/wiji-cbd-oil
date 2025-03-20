@@ -1,0 +1,1764 @@
+/***************************************************              GENERAL RESET STYLES             ***************************************************/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+* {}
+*:focus {outline: none;}
+body {
+    line-height:1;
+    font-family: 'Proxima Nova Regular', sans-serif;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+ol, ul {
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+		text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+img {
+    pointer-events: none;
+	border-style:none;
+	max-width:100%;
+}
+form fieldset {
+	margin:0;
+	padding:0;
+	border:none;
+}
+input, textarea, select {
+	vertical-align:middle;
+	color:#000;
+	padding:0;
+}
+input, select {
+	vertical-align:middle;
+}
+input::-webkit-input-placeholder{color:#6b6b6b;}
+input:focus::-webkit-input-placeholder{color:#6b6b6b;}
+/*@media*/
+
+/* @media (min-width: 1921px){} 													QHD \ UHD
+@media (min-width: 1600px) and (max-width: 1919px) {}	HD +
+@media (min-width: 1440px) and (max-width: 1599px) {}	macbook
+@media (min-width: 1360px) and (max-width: 1439px) {}	HD
+@media (min-width: 1280px) and (max-width: 1359px) {} IPAD2
+@media (min-width: 1024px) and (max-width: 1279px) {} IPAD
+@media (min-width: 896px) and (max-width: 1023px) {}	Ip Xs max horizontal
+@media (min-width: 812px) and (max-width: 895px) {}		Ip Xs horizontal
+@media (min-width: 768px) and (max-width: 811px) {}		Tablet
+@media (min-width: 736px) and (max-width: 767px) {}		Ip 6,7,8 Plus horizontal
+@media (min-width: 667px) and (max-width: 735px) {}		Ip 6,7,8 horizontal
+@media (min-width: 568px) and (max-width: 666px) {}		Ip 5 horizontal
+@media (min-width: 480px) and (max-width: 567px) {}		Ip 4 horizontal
+@media (min-width: 414px) and (max-width: 479px) {}		Ip 6,7,8
+@media (min-width: 320px) and (max-width: 413px) {}		Ip 4,5 */
+
+/*@media end*/
+
+/* wrapper */
+#wrapper {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width:100%;
+    height:100%;
+    max-width: 1920px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.layout {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1500px;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+h1 {display: none;}
+h2, h3, h5, h6 {
+    line-height:1;
+    font-family: 'Bebas Neue Cyrillic';
+}
+.notReal {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 8;
+}
+.notReal_inside {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 50%;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    border: #000 double;
+    border-radius: 44px;
+    background-color: #fff;
+    color: #000;
+    z-index: 9;
+}
+.notReal_inside span {color: #E7AC5C;}
+.notReal_close {
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #7e7e7e;
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+.notReal_close:hover {
+    background-color: #5e5e5e;
+    color: #9e9e9e;
+}
+
+header {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 83px;
+    border-bottom: 1px;
+    border-bottom-style: inset;
+    border-bottom-color: #000;
+}
+header.active {
+    position: fixed;
+    justify-content: space-around;
+    width: 100%;
+    height: 65px;
+    max-width: 1500px;
+    background: #fff;
+    border: none;
+    z-index: 3;
+    margin: 0 auto;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 168px;
+    height: 54px;
+    cursor: pointer;
+}
+.logo p {
+    width: 75px;
+    height: 26px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 13.6px;
+    color: #000;
+}
+.burger, .x {display: none;}
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 584px;
+    height: 13px;
+}
+.buy_but {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 114px;
+}
+nav a, .buy_but a {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+}
+.buy_but a {
+    line-height: 20px;
+    color: #E7AC5C;
+}
+.first {
+    display: block;
+    position: relative;
+    height: 644px;
+}
+.first_left {
+    display: block;
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 775px;
+}
+.first_left h2 {
+    display: block;
+    position: relative;
+    width: 359px;
+    font-weight: 700;
+    font-size: 93px;
+    line-height: 84.6px;
+    color: #1A1919;
+    margin: 121px 0 0 150px;
+}
+.first_left p {
+    display: block;
+    position: relative;
+    width: 249px;
+    margin: 7px 0 0 150px;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 26.6px;
+    color: #1A1919;
+    opacity: 50%;
+}
+.first_left a {
+    display: block;
+    position: relative;
+    width: 197px;
+    height: 79px;
+    font-family: 'Bebas Neue Cyrillic';
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 79px;
+    text-align: center;
+    border: #E7AC5C 3px solid;
+    color: #E7AC5C;
+    margin: 50px 0 0 150px;
+}
+.first_right {
+    display: block;
+    position: relative;
+    float: right;
+    width: 725px;
+    height: 647px;
+    background-image: url(../images/top-back.png);
+    background-size: cover;
+}
+.first_bottles {
+    display: block;
+    position: absolute;
+    width: 1190px;
+    height: 788px;
+    margin: 81px 0 0 347px;
+    z-index: 1;
+}
+.part1 {
+    display: block;
+    position: relative;
+    width: 1602px;
+    height: 893px;
+    background-color: #1A1919;
+    background-image: url(../images/hamp-part1.png);
+}
+.vector {
+    display: block;
+    position: absolute;
+    width: 1718px;
+    height: 232px;
+    z-index: 1;
+    margin: -120px 0 0 -738px;
+}
+.part1_hamp {
+    display: none;
+    position: absolute;
+    width: 1190px;
+    height: 100%;
+    z-index: 0;
+    margin: -178px 0 0 385px;
+}
+.part1 h4 {
+    display: block;
+    position: relative;
+    width: 111px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25.2px;
+    color: #fff;
+    opacity: 50%;
+    padding: 137px 0 0 150px;
+}
+.part1 h2 {
+    display: block;
+    position: relative;
+    width: 574px;
+    height: 170px;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 84.6px;
+    color: #fff;
+    margin: 17px 0 0 150px;
+}
+.part1 ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 882px;
+    height: 290px;
+    margin: 82px 0 0 150px;
+}
+.part1 li {
+    display: block;
+    position: relative;
+    width: 210px;
+    height: 290px;
+    border: #323131 2px solid;
+}
+.part1_li_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 167px;
+    height: 42px;
+    margin: 31px 0 0 23px;
+}
+.part1_li_top h3 {
+    font-size: 28px;
+    line-height: 25.2px;
+    color: #fff;
+    opacity: 10%;
+}
+.part1_li_bottom {
+    display: block;
+    position: relative;
+    width: 155px;
+    height: 140px;
+    margin: 77px auto 0 auto;
+}
+.part1 p {
+    display: block;
+    position: relative;
+    width: 155px;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 24.7px;
+    color: #fff;
+}
+.part1 a {
+    display: block;
+    position: relative;
+    width: 74px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18.2px;
+    color: #E7AC5C;
+    text-decoration: underline;
+    margin: 28px 0 0 0;
+}
+.part2 {
+    display: block;
+    position: relative;
+    height: 879px;
+}
+.part2_left {
+    display: block;
+    position: relative;
+    float: left;
+    width: 761px;
+    height: 100%;
+}
+.part2_left_back {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 492px;
+    margin: 184px 0 0 0;
+}
+.part2_bottle {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    margin: -170px 0 0 68px;
+}
+.part2_right {
+    display: block;
+    position: relative;
+    float: right;
+    width: 514px;
+    height: 533px;
+    margin: 174px 167px 0 0;
+}
+.part2_right h4 {
+    display: block;
+    position: relative;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25.2px;
+    color: #1A1919;
+    opacity: 50%;
+}
+.part2_right h2 {
+    display: block;
+    position: relative;
+    font-weight: 700;
+    font-size: 94px;
+    line-height: 84.6px;
+    color: #1A1919;
+    margin: 17px 0 0 0;
+}
+.part2 p {
+    display: block;
+    position: relative;
+    width: 350px;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 26.6px;
+    color: #1A1919;
+    opacity: 50%;
+    margin: 15px 0 0 0;
+}
+.part2_cons_inst {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 472px;
+    height: 79px;
+    margin: 88px 0 0 0;
+}
+.part2 a {
+    display: block;
+    position: relative;
+    font-family: 'Bebas Neue Cyrillic';
+    font-weight: 700;
+    font-size:  27px;
+    text-align: center;
+}
+.part2_consultation {
+    width: 231px;
+    height: 100%;
+    line-height: 75px;
+    border: #E7AC5C 3px solid;
+    color: #E7AC5C;
+}
+.part2_instruction {
+    width: 192px;
+    height: 29px;
+    line-height: 24.3px;
+    text-align: left;
+    color: #1A1919;
+    opacity: 50%;
+}
+.part2_instruction img {
+    position: absolute;
+    margin: -2px 0px 0px -34.5px;
+}
+.benefits {
+    display: block;
+    position: relative;
+    overflow: visible;
+    height: 2886px;
+    background-color: #F1F1F1;
+}
+.benefits_inside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 1198px;
+    height: 2350px;
+    padding: 130px 0 0 151px;
+}
+.ben_cbd, .ben_oil, .ben_extract {
+    display: block;
+    position: relative;
+    overflow: visible;
+    width: 1198px;
+    height: 770px;
+    background-color: #E8E8E8;
+}
+.ben_text {
+    display: block;
+    position: relative;
+    width: 412px;
+    height: 444px;
+    margin: 153px 0 0 100px;
+}
+.ben_text h4 {
+    display: block;
+    position: relative;
+    width: 199px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25.2px;
+    color: #1A1919;
+    opacity: 50%;
+}
+.ben_text h2 {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 94px;
+    line-height: 84.6px;
+    margin: 17px 0 0 0;
+}
+.ben_text ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 328px;
+    height: 258px;
+    margin: 59px 0 0 0;
+}
+.benefit_number {
+    display: block;
+    position: relative;
+    width: 19px;
+    font-size: 19px;
+    line-height: 19px;
+    color: #C9C9C9;
+}
+.benefit_content {
+    display: block;
+    position: relative;
+    width: 266px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1A1919;
+}
+.benefits_inside li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+#ben_oil_text {
+    margin: 153px 102px 0 0;
+}
+#ben_oil_text, #ben_oil_text h4, #ben_oil_text h2, #ben_oil_text ul, #ben_oil_text li {
+    float: right;
+    text-align: right;
+}
+#ben_oil_text li {flex-direction: row-reverse;}
+.benefits_inside img {
+    display: block;
+    position: absolute;
+    width: 646px;
+    height: 513.42px;
+    z-index: 1;
+}
+.ben_cbd img {margin: -470px 0 0px 654px;}
+.ben_oil img {margin: 142px 0 0 -116px;}
+.ben_extract img {
+    width: 1089px;
+    height: 588px;
+    margin: -444px 0 0 213px;
+}
+.license {
+    display: block;
+    position: absolute;
+    width: 1201px;
+    height: 512px;
+    background-image: url(../images/bottle-license2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 145px 0 0 149px;
+    z-index: 1;
+    cursor: pointer;
+}
+.license h4 {
+    display: block;
+    position: relative;
+    width: 337px;
+    font-size: 21px;
+    line-height: 25.2px;
+    color: #1A1919;
+    opacity: 50%;
+    margin: 96px 0 0 92px;
+}
+.license h3 {
+    display: block;
+    position: relative;
+    width: 383px;
+    font-size: 114px;
+    line-height: 102.6px;
+    color: #1A1919;
+    margin: 17px 0 0 92px;
+}
+.faq {
+    display: block;
+    position: relative;
+    height: 1460.38px;
+    background-color: #1A1919;
+}
+.faq_inside {
+    display: block;
+    position: relative;
+    width: 782px;
+    height: 1059px;
+    padding: 404px 0 0 353px;
+}
+.faq h4 {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 21px;
+    line-height: 25.2px;
+    text-align: center;
+    color: #fff;
+    opacity: 50%;
+    margin: 0 auto;
+}
+.faq h3 {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 94px;
+    line-height: 84.6px;
+    text-align: center;
+    color: #fff;
+    margin: 17px auto 0 auto;
+}
+.accord {margin: 81px auto 0 auto;}
+.accordion-body {display: none;}
+.accordion li {margin: 16px 0 16px 0;}
+.accordion-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+}
+.accordion-header p {
+    font-family: 'Bebas Neue Cyrillic'; 
+    font-size: 37px;
+    line-height: 33.3px;
+    text-align: left;
+    width: 646px;
+    color: #fff;
+}
+.accord_plus {
+    width: 60px;
+    height: 60px;
+}
+.accordion-body {
+    display: none;
+    position: relative;
+    height: 140px;
+}
+.accordion-body.active {display: block;}
+.accordion-body p {
+    display: block;
+    position: relative;
+    width: 613px;
+    height: 110px;
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #fff;
+    opacity: 50%;
+    margin: 0 auto;
+}
+.ourproducts {
+    display: block;
+    position: relative;
+    height: 1183px;
+}
+.ourprod_head {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 127px;
+    margin: 140px auto 0 auto;
+}
+.ourprod_head h4 {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 21px;
+    line-height: 25.2px;
+    text-align: center;
+    color: #1A1919;
+    opacity: 50%;
+}
+.ourprod_head h3 {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 94px;
+    line-height: 84.6px;
+    text-align: center;
+}
+.our_prod_inside {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 775px;
+    margin: -1px 0 0 150px;
+}
+.our_prod_inside ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1199px;
+    height: 735px;
+    padding: 40px 0 0 0;
+}
+.our_prod_inside li {
+    width: 387px;
+    height: 100%;
+}
+.ourimg {
+    display: block;
+    position: relative;
+    width: 363px;
+    height: 370px;
+    background-color: #F2F2F2;
+    margin: 11px auto 0 auto;
+}
+.ourprod_gray_bord {
+    width: 387px;
+    height: 625px;
+    border: #F2F2F2 2px solid;
+    margin: 110px 0 0 0;
+}
+.ourimg img {
+    position: absolute;
+    width: 198px;
+    height: 513px;
+    margin: -110px 80px 0 85px;
+}
+.ourprod_gray_bord h6 {
+    display: block;
+    position: relative;
+    width: 131px;
+    font-family: 'Proxima Nova Regular', sans-serif;
+    font-size: 12px;
+    line-height: 14.4px;
+    text-align: center;
+    color: #1A1919;
+    opacity: 50%;
+    margin: 69px auto 0 auto;
+}
+.ourprod_gray_bord h5 {
+    display: block;
+    position: relative;
+    width: 204px;
+    font-size: 64px;
+    line-height: 57.6px;
+    color: #1A1919;
+    margin: 13px auto 0 auto;
+}
+.ourprod_gray_bord a {
+    display: block;
+    position: relative;
+    width: 72px;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #E7AC5C;
+    margin: 37px auto 0 auto;
+}
+.ourreviews {
+    display: block;
+    position: relative;
+    height: 734px;
+}
+.ourvews_head {
+    display: block;
+    position: relative;
+    width: 445px;
+    height: 127px;
+    margin: 0 auto;
+}
+.ourviews_head h4 {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 21px;
+    line-height: 25.2px;
+    text-align: center;
+    color: #1A1919;
+    opacity: 50%;
+}
+.ourviews_head h3 {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 94px;
+    line-height: 84.6px;
+    text-align: center;
+}
+.our-vie-inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    margin: 60px auto 0 auto;
+}
+.our-vie-inside img {height: 554px;}
+.just_slider {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 1350px;
+    height: 562px;
+}
+.just_slide {
+    display: block;
+    position: relative;
+    width: 316px;
+    height: 100%;
+    background-color: #F2F2F2;
+}
+.slick-list button {display: none;}
+.your-questions {
+    display: block;
+    position: relative;
+    height: 465px;
+}
+.your_que_inside {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 1199px;
+    height: 278px;
+    border: #3D3D3D 2px solid;
+    margin: 85px auto 0 auto;
+}
+.your_que_left {
+    display: block;
+    position: relative;
+    width: 529px;
+    height: 100%;
+}
+.your_que_left h4 {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 21px;
+    line-height: 25.2px;
+    text-align: left;
+    color: #1A1919;
+    opacity: 50%;
+    margin: 76px 0 0 71px;
+}
+.your_que_left h3 {
+    display: block;
+    position: relative;
+    font-size: 114px;
+    line-height: 102.6px;
+    color: #1A1919;
+    margin: 17px 0 0 71px;
+}
+.your_que_center {
+    display: block;
+    position: relative;
+    width: 313px;
+    height: 100%;
+}
+.your_que_right {
+    display: block;
+    position: relative;
+    width: 357px;
+    height: 100%;
+}
+.your_que_right a {
+    display: block;
+    position: relative;
+    width: 246px;
+    height: 79px;
+    font-family: 'Bebas Neue Cyrillic';
+    font-size: 27px;
+    line-height: 79px;
+    text-align: center;
+    color: #E7AC5C;
+    border: #E7AC5C 3px solid;
+    margin: 99px 0 0 48px;
+}
+footer {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 86px;
+}
+.foot_inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1199px;
+    height: 54px;
+    margin: 16px 0 0 150px;
+}
+.foot_left {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 451px;
+    height: 100%;
+}
+#logofoot {width: 173px;}
+.foot_copyright, .foot_ri_res {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    line-height: 10.8px;
+    text-align: right;
+    color: #000;
+    opacity: 20%;
+}
+.foot_copyright {width: 149px;}
+.foot_ri_res {width: 129px;}
+
+@media (min-width: 1360px) and (max-width: 1919px) {
+    .layout {max-width: 1360px;}
+    header.active {max-width: 1360px;}
+    .first_right {display: none;}
+    .part1 ul {position: absolute;}
+    .part2 {}
+    .part2_bottle {
+        width: 850px;
+        margin: -130px 0 0 20px;
+    }
+    .part2_right {margin: 100px 70px 0 0;}
+    .benefits {height: 2700px;}
+    .ben_text {margin: 110px 0 0 100px;}
+    .benefits_inside {
+        height: 2000px;
+        padding: 50px 0 0 50px;
+    }
+    .benefits_inside img {
+        width: 516.8px;
+        height: 410.72px;
+    }
+    .ben_cbd, .ben_oil, .ben_extract {height: 650px;}
+    .ben_cbd img {margin: -470px 0 0px 654px;}
+    .ben_oil {height: 570px;}
+    #ben_oil_text {margin: 60px 80px 0 0;}
+    .ben_oil img {margin: 80px 0 0 110px;}
+    #ben_extract_text {margin: 60px 0 0 100px;}
+    .ben_extract img {
+        width: 920.8px;
+        height: 500.72px;
+        margin: -390px 0 0 170px;
+    }
+    .license {margin: 145px 0 0 50px;}
+    .faq {height: 950px;}
+    .faq_inside{
+        height: 800px;
+        padding: 100px 0 0 300px;
+    }
+    .ourproducts {height: 1000px;}
+    .ourprod_head {margin: 100px auto 0 auto;}
+    .our_prod_inside {margin: 20px 0 0 0px;}
+    .your-questions {height: 330px;}
+}
+@media (min-width: 768px) and (max-width: 1359px) {
+    .layout {max-width: 760px;}
+    header {height: 70px;}
+    header.active {max-width: 768px;}
+    .logo {
+        width: 100px;
+        height: 40px;
+    }
+    .logo img {width: 40px;}
+    .logo p {
+        width: 50px;
+        font-size: 9px;
+        line-height: 12px;
+    }
+    nav {width: 400px;}
+    nav a, .buy_but a {font-size: 12px;}
+    .buy_but {width: 100px;}
+    .first {height: 500px;}
+    .first_left {width: 400px;}
+    .first_left h2 {
+        width: 300px;
+        font-size: 78px;
+        line-height: 70.6px;
+        margin: 100px 0 0 80px;
+    }
+    .first_left p {margin: 7px 0 0 80px;}
+    .first_left a {
+        width: 170px;
+        height: 75px;
+        font-size: 25px;
+        line-height: 75px;
+        margin: 40px 0 0 80px;
+    }
+    .first_right {display: none;}
+    .first_bottles {
+        width: 730px;
+        height: 550px;
+        margin: 60px 0 0 160px;
+    }
+    .part1 {
+        height: 600px;
+        background-size: contain;
+    }
+    .part1 h4 {
+        width: 90px;
+        font-size: 18px;
+        line-height: 20px;
+        padding: 100px 0 0 80px;
+    }
+    .part1 h2 {
+        width: 400px;
+        height: 130px;
+        font-size: 60px;
+        line-height: 60px;
+        margin: 10px 0 0 80px;
+    }
+    .part1 ul {
+        width: 640px;
+        height: 200px;
+        margin: 70px 0 0 80px;
+    }
+    .part1 li {
+        width: 150px;
+        height: 200px;
+    }
+    .part1_li_top {
+        width: 130px;
+        height: 40px;
+        margin: 20px auto 0 auto;
+    }
+    .part1_li_top img {width: 35px;}
+    .part1_li_top h3 {
+        font-size: 25px;
+    }
+    .part1_li_bottom {
+        width: 120px;
+        margin: 20px auto;
+    }
+    .part1 p {
+        width: 120px;
+        font-size: 15px;
+        line-height: 23.7px;
+    }
+    .part1 a {
+        font-size: 12px;
+        line-height: 15.2px;
+        margin: 15px 0 0 0;
+    }
+    .part2 {height: 430px;}
+    .part2_bottle {
+        display: block;
+        width: 450px;
+        margin: -80px 0 0 50px;
+    }
+    .part2_left {width: 400px;}
+    .part2_left_back {
+        height: 280px;
+        margin: 80px 0 0 0;
+    }
+    .part2_right {
+        width: 250px;
+        height: 240px;
+        margin: 55px 50px 0 0;
+    }
+    .part2_right h4 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .part2_right h2 {
+        font-size: 50px;
+        line-height: 50px;
+        margin: 10px 0 0 0;
+    }
+    .part2 p {
+        width: 250px;
+        font-size: 15px;
+        line-height: 20px;
+        margin: 10px 0 0 0;
+    }
+    .part2_cons_inst {
+        width: 250px;
+        height: 40px;
+        margin: 30px 0 0 0;
+    }
+    .part2 a {
+        width: 100px;
+        font-size: 16px;
+        line-height: 36px;
+    }
+    .part2_instruction {
+        line-height: -1px;
+        margin: 0;
+    }
+    .part2_instruction img {margin: 0px 0px 0px -34.5px;}
+
+    .benefits {height: 1570px;}
+    .ben_text {
+        width: 240px;
+        height: 300px;
+        margin: 80px 0 0 80px;
+    }
+    .benefits_inside {
+        width: 690px;
+        height: 1300px;
+        padding: 50px 0 0 50px;
+    }
+    .ben_cbd, .ben_oil, .ben_extract {
+        height: 420px;
+        width: 650px;
+    }
+    .benefits_inside img {
+        width: 350px;
+        height: 300px;
+    }
+    .benefits h4 {
+        width: 90px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .benefits h2 {
+        font-size: 50px;
+        line-height: 50px;
+        margin: 10px 0 0 0;
+    }
+    .ben_text ul {
+        width: 200px;
+        height: 180px;
+        margin: 30px 0 0 0;
+    }
+    .benefit_number {
+        width: 15px;
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .benefit_content {
+        width: 170px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .ben_cbd img {margin: -300px 0 0px 330px;}
+    #ben_oil_text {margin: 60px 80px 0 0;}
+    #ben_oil_text h4 {width: 150px;}
+    .ben_oil img {margin: 80px 0 0 -30px;}
+    #ben_extract_text {margin: 60px 0 0 80px;}
+    .ben_extract img {
+        width: 640px;
+        height: 380px;
+        margin: -320px 0 0 47px;
+    }
+    .license {
+        width: 650px;
+        height: 280px;
+        margin: 80px 0 0 70px;
+    }
+    .license h4 {
+        width: 200px;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 55px 0 0 50px;
+    }
+    .license h3 {
+        width: 250px;
+        font-size: 70px;
+        line-height: 60px;
+        margin: 10px 0 0 50px;
+    }
+    .faq {height: 950px;}
+    .faq_inside{
+        width: 500px;
+        height: 680px;
+        padding: 160px 0 0 134px;
+    }
+    .faq_inside h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .faq_inside h3 {
+        font-size: 50px;
+        line-height: 50px;
+        margin: 5px auto 0 auto;
+    }
+    .accord {margin: 50px auto 0 auto;}
+    .accordion-header p {
+        font-size: 24px;
+        line-height: 20px;
+        width: 400px;
+    }
+    .accord_plus {
+        width: 45px;
+        height: 45px;
+    }
+    .accord_arrow {
+        width: 30px;
+    }
+    .accordion-body p {
+        width: 400px;
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .ourproducts {height: 670px;}
+    .ourprod_head {
+        height: 70px;
+        margin: 50px auto 0 auto;
+    }
+    .ourprod_head h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .ourprod_head h3 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .our_prod_inside {
+        height: 540px;
+        margin: 0 0 0 0;
+    }
+    .our_prod_inside ul {
+        width: 650px;
+        height: 350px;
+    }
+    .our_prod_inside li {width: 230px;}
+    .ourprod_gray_bord {
+        width: 200px;
+        height: 400px;
+        margin: 90px 0 0 auto;
+    }
+    .ourimg {
+        width: 180px;
+        height: 220px;
+    }
+    .ourimg img {
+        width: 130px;
+        height: 340px;
+        margin: -78px 0px 0 18px;
+    }
+    .ourprod_gray_bord h6 {
+        font-size: 10px;
+        line-height: 10px;
+    }
+    .ourprod_gray_bord h5 {
+        width: 100px;
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .ourprod_gray_bord a {
+        width: 54px;
+        font-size: 14px;
+        line-height: 14px;
+        margin: 17px auto 0 auto;
+    }
+    .our_prod_right_img {
+        width: 100px;
+        height: 534px;
+    }
+    .ourreviews {height: 550px;}
+    .ourviews_head {height: 70px;}
+    .ourviews_head h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .ourviews_head h3 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .our-vie-inside {margin: 50px auto 0 auto;}
+    #our_vie_ins_img {height: 400px;}
+    .just_slider {
+        width: 680px;
+        height: 400px;
+    }
+    .slick-list {height: 400px;}
+    .slick-track {height: 400px;}
+    .your-questions {height: 200px;}
+    .your_que_inside {
+        width: 650px;
+        height: 170px;
+    }
+    .your_que_left {width: 262px;}
+    .your_que_left h4 {
+        width: 50%;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 40px 0 0 30px;
+    }
+    .your_que_left h3 {
+        font-size: 70px;
+        line-height: 60px;
+        margin: 10px 0 0 30px;
+    }
+    .your_que_center {width: 180px;}
+    .your_que_right {width: 200px;}
+    .your_que_right a {
+        width: 124px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+        margin: 65px auto 0 auto;
+    }
+    footer {height: 50px;}
+    .foot_inside {
+        width: 650px;
+        height: 50px;
+        margin: 0px auto;
+    }
+    #logofoot {width: 100px;}
+}
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+    .layout {max-width: 414px;}
+    header {height: 70px;}
+    header.active {
+        max-width: 414px;
+        height: 45px;
+    }
+    .notReal_inside {font-size: 2rem;}
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+    .burg {
+        display: block;
+        position: relative;
+        width: 32px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: #1A1919;
+    }
+    nav {
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 200px;
+        height: 400px;
+        background-color: #fff;
+        margin: 340px 0 0 200px;
+        z-index: 2;
+    }
+    nav a {
+        display: block;
+        position: relative;
+        width: 120px;
+        text-align: center;
+    }
+    .x {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        margin: 414px 215px 0 0;
+        cursor: pointer;
+    }
+    .logo {
+        width: 100px;
+        height: 40px;
+    }
+    .logo img {width: 40px;}
+    .logo p {
+        width: 50px;
+        font-size: 9px;
+        line-height: 12px;
+    }
+    .buy_but a {font-size: 12px;}
+    .buy_but {width: 100px;}
+    .first {height: 500px;}
+    .first_left {width: 400px;}
+    .first_left h2 {
+        width: 270px;
+        font-size: 70px;
+        line-height: 70px;
+        margin: 80px 0 0 60px;
+    }
+    .first_left p {margin: 5px 0 0 60px;}
+    .first_left a {
+        width: 140px;
+        height: 60px;
+        font-size: 24px;
+        line-height: 60px;
+        margin: 40px 0 0 60px;
+    }
+    .first_right {display: none;}
+    .first_bottles {
+        width: 730px;
+        height: 550px;
+        margin: 0px 0 0 50px;
+        opacity: 25%;
+    }
+    .part1 {
+        height: 600px;
+        background-size: contain;
+    }
+    .part1 h4 {
+        width: 90px;
+        font-size: 18px;
+        line-height: 20px;
+        padding: 90px 0 0 60px;
+    }
+    .part1 h2 {
+        width: 330px;
+        height: 130px;
+        font-size: 52px;
+        line-height: 60px;
+        margin: 10px 0 0 60px;
+    }
+    .part1 ul {
+        flex-wrap: wrap;
+        width: 250px;
+        height: 300px;
+        margin: 20px 0 0 70px;
+    }
+    .part1 li {
+        width: 110px;
+        height: 140px;
+    }
+    .part1_li_top {
+        width: 90px;
+        height: 30px;
+        margin: 10px auto 0 auto;
+    }
+    .part1_li_top img {width: 25px;}
+    .part1_li_top h3 {
+        font-size: 20px;
+    }
+    .part1_li_bottom {
+        width: 80px;
+        height: 80px;
+        margin: 5px auto;
+    }
+    .part1 p {
+        width: 80px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .part1 a {
+        font-size: 10px;
+        line-height: 15px;
+        margin: 15px 0 0 0;
+    }
+    .part2 {height: 370px;}
+    .part2_bottle {
+        display: block;
+        width: 240px;
+        margin: 38px 0 0 260px;
+    }
+    .part2_left {
+        position: absolute;
+        width: 400px;
+    }
+    .part2_left_back {
+        height: 280px;
+        margin: 55px 0 0 0;
+    }
+    .part2_right {
+        width: 250px;
+        height: 240px;
+        margin: 30px 110px 0 0;
+    }
+    .part2_right h4 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .part2_right h2 {
+        font-size: 50px;
+        line-height: 50px;
+        margin: 10px 0 0 0;
+    }
+    .part2 p {
+        width: 250px;
+        font-size: 15px;
+        line-height: 20px;
+        margin: 10px 0 0 0;
+    }
+    .part2_cons_inst {
+        width: 250px;
+        height: 40px;
+        margin: 30px 0 0 0;
+    }
+    .part2 a {
+        width: 100px;
+        font-size: 16px;
+        line-height: 36px;
+    }
+    .part2_instruction {
+        line-height: -1px;
+        margin: 0;
+    }
+    .part2_instruction img {margin: 0px 0px 0px -34.5px;}
+
+    .benefits {height: 1220px;}
+    .ben_text {
+        width: 240px;
+        height: 300px;
+        margin: 25px 0 0 30px;
+    }
+    .benefits_inside {
+        width: 350px;
+        height: 1070px;
+        padding: 25px 0 0 25px;
+    }
+    .ben_cbd, .ben_oil, .ben_extract {
+        height: 350px;
+        width: 350px;
+    }
+    .benefits_inside img {
+        width: 350px;
+        height: 300px;
+    }
+    .benefits h4 {
+        width: 90px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .benefits h2 {
+        font-size: 50px;
+        line-height: 50px;
+        margin: 10px 0 0 0;
+    }
+    .ben_text ul {
+        width: 200px;
+        height: 180px;
+        margin: 30px 0 0 0;
+    }
+    .benefit_number {
+        width: 15px;
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .benefit_content {
+        width: 170px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .ben_cbd img {margin: -300px 0 0px 230px;}
+    #ben_oil_text {margin: 25px 30px 0 0;}
+    #ben_oil_text h4 {width: 150px;}
+    .ben_oil img {margin: 25px 0 0 -254px}
+    #ben_extract_text {margin: 25px 0 0 30px;}
+    .ben_extract img {
+        width: 350px;
+        height: 250px;
+        margin: -250px 0 0 120px;
+    }
+    .license {
+        width: 350px;
+        height: 150px;
+        margin: 50px 0 0 25px;
+    }
+    .license h4 {
+        width: 175px;
+        font-size: 12px;
+        line-height: 16px;
+        margin: 20px 0 0 10px;
+    }
+    .license h3 {
+        width: 205px;
+        font-size: 60px;
+        line-height: 60px;
+        margin: 5px 0 0 10px;
+    }
+    .faq {height: 700px;}
+    .faq_inside{
+        width: 350px;
+        height: 550px;
+        padding: 120px 0 0 35px;
+    }
+    .faq_inside h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .faq_inside h3 {
+        font-size: 50px;
+        line-height: 50px;
+        margin: 5px auto 0 auto;
+    }
+    .accord {margin: 50px auto 0 auto;}
+    .accordion li {margin: 10px 0 10px 0;}
+    .accordion-header {height: 40px;}
+    .accordion-header p {
+        font-size: 20px;
+        line-height: 20px;
+        width: 275px;
+    }
+    .accord_plus {
+        width: 30px;
+        height: 30px;
+    }
+    .accord_arrow {
+        width: 25px;
+    }
+    .accordion-body {height: 110px;}
+    .accordion-body p {
+        width: 275px;
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .ourproducts {height: 440px;}
+    .ourprod_head {
+        height: 70px;
+        margin: 40px auto 0 auto;
+    }
+    .ourprod_head h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .ourprod_head h3 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .our_prod_inside {
+        height: 340px;
+        margin: 0 0 0 0;
+    }
+    .our_prod_inside ul {
+        width: 350px;
+        height: 250px;
+        padding: 40px 0 0 25px;
+    }
+    .our_prod_inside li {width: 170px;}
+    .ourprod_gray_bord {
+        width: 100px;
+        height: 216px;
+        margin: 50px 0 0 auto;
+    }
+    .ourimg {
+        width: 90px;
+        height: 100px;
+    }
+    .ourimg img {
+        width: 75px;
+        height: 200px;
+        margin: -74px 0px 0 4px;
+    }
+    .ourprod_gray_bord h6 {
+        width: 84px;
+        font-size: 8px;
+        line-height: 8px;
+        margin: 38px auto 0 auto;
+    }
+    .ourprod_gray_bord h5 {
+        width: 83px;
+        font-size: 26px;
+        line-height: 24px;
+        margin: 4px auto 0 auto;
+    }
+    .ourprod_gray_bord a {
+        width: 48px;
+        font-size: 12px;
+        line-height: 12px;
+        margin: 10px auto 0 auto;
+    }
+    .our_prod_right_img {display: none;}
+    .ourreviews {height: 470px;}
+    .ourviews_head {height: 70px;}
+    .ourviews_head h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .ourviews_head h3 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .our-vie-inside {margin: 30px auto 0 auto;}
+    #our_vie_ins_img {display: none;}
+    .just_slider {
+        width: 414px;
+        height: 340px;
+    }
+    .slick-list {height: 340px;}
+    .slick-track {height: 340px;}
+    .your-questions {height: 130px;}
+    .your_que_inside {
+        width: 350px;
+        height: 100px;
+        margin: 20px auto 0 auto;
+    }
+    .your_que_left {width: 140px;}
+    .your_que_left h4 {
+        width: 50%;
+        font-size: 7px;
+        line-height: 12px;
+        margin: 25px 0 0 15px;
+    }
+    .your_que_left h3 {
+        font-size: 35px;
+        line-height: 38px;
+        margin: 0 0 0 15px;
+    }
+    .your_que_center {width: 110px;}
+    .your_que_right {width: 110px;}
+    .your_que_right a {
+        width: 55px;
+        height: 20px;
+        font-size: 10px;
+        line-height: 20px;
+        border-width: 2px;
+        margin: 40px auto 0 auto;
+    }
+    footer {height: 40px;}
+    .foot_inside {
+        width: 350px;
+        height: 40px;
+        margin: 0px auto;
+    }
+    .foot_left {width: 350px;}
+    #logofoot {width: 100px;}
+    #buy_but_foot {display: none;}
+}
+@media (min-width: 320px) and (max-width: 413px) {}
